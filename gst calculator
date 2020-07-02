@@ -1,0 +1,25 @@
+# asks is user want to caculate gst or not
+answergst = input("I'm your personal gst calculator. Do you want to calculate your lame gst? yes or no.")
+# if said no then says leave now but crashes
+# if yes it carries on the string
+if answergst.lower() == "yes":
+    answergst2 = input("ok cool do you want to get rid of it or include it? n = rid y = include:")
+    # asks if you want to get rid of gst of add it to your amount if you say anything other than yes / no then it says leave now again
+else:
+    print("leave now")
+if answergst2.lower() == "y":
+    # times the number by .15 then adds it to the original number to get the answer
+    numberinc = float(input("give me the price of the item."))
+    answerincgst = numberinc*.15
+    answerinc = answerincgst+numberinc
+    print("this is your answer", answerinc)
+    print("and this is the amount of tax money you gave", answerincgst)
+if answergst2.lower() == "n":
+    # times the number by .15 then subtracts it to the original number to get the answer
+    numberrid = float(input("give me the price of the item."))
+    answerrid2 = numberrid*.15
+    answerrid = numberrid-answerrid2
+    print("this is your answer", answerrid)
+    print("and this is the amount of tax money you gave", answerrid2)
+else:
+    print("leave now")
